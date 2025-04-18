@@ -11,7 +11,7 @@ export default async function Home() {
 
   return (
     <div className="flex flex-col items-center bg-purple-200 p-4">
-      <LinksDisplay inputLinks={links} />
+      <LinksDisplay />
     </div>
   );
 }
