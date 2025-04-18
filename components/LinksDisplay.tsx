@@ -4,11 +4,7 @@ import { useState } from "react";
 import LinkPreview from "./LinkPreview";
 import ShortenForm from "./ShortenForm";
 
-export default function LinksDisplay({
-    inputLinks,
-}: {
-    inputLinks: LinkProps[];
-}) {
+export default function LinksDisplay() {
     const [links, setLinks] = useState<LinkProps | null>(null);
 
     return (

@@ -13,7 +13,6 @@ export default function ShortenForm({
     const [alias, setAlias] = useState("");
     const [url, setUrl] = useState("");
     const [errorte, setErrorte] = useState("");
-    const [shortUrl, setShortUrl] = useState("");
 
     const base = "https://cs391-url-shortener.vercel.app/";
 
@@ -23,11 +22,9 @@ export default function ShortenForm({
             onSubmit={async (event) => {
                 event.preventDefault();
                 setErrorte("");
-                setShortUrl("");
                 const result = await createNewLink(alias, url);
                 if (result.success) {
                     setLink(result.link);
-                    setShortUrl(base + result.link.alias);
                     setAlias("");
                     setUrl("");
                 } else {

@@ -15,7 +15,7 @@ export default function LinkPreview({ link }: { link: LinkProps }) {
             await navigator.clipboard.writeText(newUrl);
             setCopied(true);
             setTimeout(() => setCopied(false), 3000);
-        } catch (err) {
+        } catch {
             alert("Failed to copy.");
         }
     }
