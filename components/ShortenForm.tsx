@@ -14,8 +14,6 @@ export default function ShortenForm({
     const [url, setUrl] = useState("");
     const [errorte, setErrorte] = useState("");
 
-    const base = "https://cs391-url-shortener.vercel.app/";
-
     return (
         <form
             className="bg-white text-purple-900 rounded-xl shadow-md p-4 m-2 w-96 border border-white-300"
