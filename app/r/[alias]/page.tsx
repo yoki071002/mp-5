@@ -11,7 +11,7 @@ export default async function RedirectPage({
 }: {
     params: {alias: string};
 }) {
-    const alias = params.alias;
+    const { alias } = params;
     const collection = await getCollection(LINKS_COLLECTION);
     const record = await collection.findOne<LinkRecord>({ alias });
 
