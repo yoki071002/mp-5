@@ -9,9 +9,9 @@ type LinkRecord = {
 export default async function RedirectPage({
     params,
 }: {
-    params: {alias: string};
-}): Promise<any> {
-    const { alias } = params;
+    params: Promise<{ alias: string }>;
+}): Promise<void> {
+    const { alias } = await params;
     const collection = await getCollection(LINKS_COLLECTION);
     const record = await collection.findOne<LinkRecord>({ alias });
 
