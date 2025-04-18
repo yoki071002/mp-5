@@ -1,4 +1,3 @@
-import getAllLinks from "@/lib/getAllLinks";
 import LinksDisplay from "@/components/LinksDisplay";
 
 export const metadata = {
@@ -7,7 +6,6 @@ export const metadata = {
 }
 
 export default async function Home() {
-  const links = await getAllLinks();
 
   return (
     <div className="flex flex-col items-center bg-purple-200 p-4">
